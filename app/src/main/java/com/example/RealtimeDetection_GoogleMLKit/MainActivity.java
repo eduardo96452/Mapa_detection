@@ -70,6 +70,7 @@ public class MainActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         mImageView = findViewById(R.id.image_view);
         txtResults = findViewById(R.id.txtresults);
         btGaleria = findViewById(R.id.btGallery);
@@ -298,10 +299,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
     @Override
     public void onMapClick(@NonNull LatLng latLng) {
-        this.Mapa.clear();
-        Mapa.addMarker(new MarkerOptions().position(latLng).title("Centro del Universo!!"));
 
-        this.drawRectangle(latLng, 100);
     }
 
     @Override
@@ -316,7 +314,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
                 .newLatLngZoom(new
                                 LatLng(-1.0227893720763475, -79.4628673782913),
                         15);
-        Mapa.moveCamera(camUpd1);
+
     }
 
     private void drawRectangle(LatLng center, double radius) {

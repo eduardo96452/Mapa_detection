@@ -17,6 +17,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        tools:replace="android:theme"
         android:theme="@style/Theme.FaceDetection2023_IT"
         tools:targetApi="31">
 
